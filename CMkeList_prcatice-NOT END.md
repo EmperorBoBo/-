@@ -34,6 +34,7 @@
     add_executable(<name> ${SRC_LIST})
     ```
 7.**target_link_libraries** 将若干个库连接到目标库文件
+
     ```
         target_link_libraries(<name> lib1,lib2,lib3)
         
@@ -41,10 +42,12 @@
         name 依赖 lib1 ，lib1 依赖 lib2
     ```
 8. **add_definitions** 为当前路径以及子目录源文件引入由-D引入的define flag
+
     ```
     add_definitions(-DFOO -DDEBUG)
     ```
 9. **add_subdirectory**如果当前目录还有子目录时可以使用add_subdirectory,子目录中也需要包含有CMakeList.txt
+
     ```
     #sub_dir 指定包含CMakeList.txt和源码文件的子目录位置
     #binary_dir 是输出路径，一般可以不指定
